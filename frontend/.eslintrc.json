@@ -1,0 +1,72 @@
+{
+  "extends": ["react-app", "standard", "standard-react"],
+  "plugins": ["jsx-a11y", "simple-import-sort", "prettier"],
+  "rules": {
+    "react/no-unused-prop-types": "off",
+    "react/prop-types": 0,
+    "camelcase": "off",
+    "indent": "off",
+    "no-console": "off",
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-unused-vars": "off",
+    "prefer-const": "error",
+    "multiline-ternary": "off",
+    "space-before-function-paren": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "no-undef": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-pascal-case": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["reflect-metadata"],
+          [
+            // Libs
+            "^react.*",
+            "^@react-keycloak.*",
+            "^mobx.*",
+            "typedi",
+            "styled-components",
+            "antd",
+            "^@ant-design.*",
+            "^\\w.*",
+            "^@sentry.*",
+            // Internal packages
+            "^@.*",
+            // Parent imports. Put `..` last
+            "^\\.\\./.*",
+            // Other relative imports. Put same-folder imports and `.` last
+            "^\\./.*",
+            // Style imports
+            "^.*/styles",
+            // JavaScript files
+            "^\\./.+\\.jsx?$",
+            "^\\./.+\\.tsx?$",
+            // Other
+            "^.*\\./.*"
+          ]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}
